@@ -23,6 +23,8 @@ module.exports = function() {
   that.__proto__ = oldProto; // I feel so dirty
   
   that._write = function(chunk, enc, cb) {
+    if (!Buffer.isBuffer(chunk)) {
+      throw new TypeError('expected a buffer'); }
     chunks.push(chunk);
     process.nextTick(cb);
   };
