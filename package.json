@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/rschaosid/concat-stream-promise/issues"
   },
-  "homepage": "https://github.com/rschaosid/concat-stream-promise"
+  "homepage": "https://github.com/rschaosid/concat-stream-promise",
+  "dependencies": {
+    "promise": "^5.0.0"
+  }
 }
