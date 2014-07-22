@@ -24,4 +24,5 @@ Contributing
 
 This is about as simple as a module can get, but there are some things missing:
 * Tests (I got started with [vows](https://www.npmjs.org/package/vows))
+* Testing in non-0.10 Node
 * A better way of doing multiple inheritance between Promise and Writable: currently we have to use `__proto__`, so it won't work in the browser.
