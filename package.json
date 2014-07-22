@@ -1,0 +1,21 @@
+{
+  "name": "concat-stream-promise",
+  "version": "0.0.0",
+  "description": "concat-stream but with promises",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rschaosid/concat-stream-promise.git"
+  },
+  "keywords": [
+    "concatenate",
+    "stream",
+    "promise"
+  ],
+  "author": "rschaosid <rschaosid@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rschaosid/concat-stream-promise/issues"
+  },
+  "homepage": "https://github.com/rschaosid/concat-stream-promise"
+}
