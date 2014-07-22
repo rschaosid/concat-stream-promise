@@ -1,9 +1,9 @@
 concat-stream-promise
 =====================
 
-Promise version of [concat-stream](https://www.npmjs.org/package/concat-stream).
+promise version of [concat-stream](https://www.npmjs.org/package/concat-stream).
 
-Usage
+usage
 -----
 
 ```js
@@ -17,9 +17,19 @@ foo.pipe(concat()).then(function(buffer) {
 
 `concat()` returns a [promise](https://www.npmjs.org/package/promise) that is also a Writable Stream. When the stream ends, the promise is resolved with a buffer.
 
-It doesn't encode or decode strings (that's your job anyway), so don't give it strings and don't expect it to give you a string.
+'encoding' stuff
+----------------
 
-Contributing
+Don't write strings to it. It won't encode them; it'll just throw.
+
+options
+-------
+
+This space intentionally left blank.
+
+No, seriously, there aren't any.
+
+contributing
 ------------
 
 This is about as simple as a module can get, but there are some things missing:
