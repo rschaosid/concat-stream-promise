@@ -12,10 +12,15 @@ module.exports = function() {
   });
   
   // "Parasitic" inheritance from Writable
-  Object.keys(Writable.prototype).forEach(function(method) {
+  for(method in Writable.prototype) {
     that[method] = Writable.prototype[method];
-  });
+  }
+  
+  // the Writable constructor checks instanceof, so we have to work around it
+  var oldProto = that.__proto__; // this is probably Promise.prototype or something
+  that.__proto__ = Writable.prototype;
   Writable.call(that, { decodeStrings: false });
+  that.__proto__ = oldProto; // I feel so dirty
   
   that._write = function(chunk, enc, cb) {
     chunks.push(chunk);
